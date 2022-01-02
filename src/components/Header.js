@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
+import Button from './Button'
 
 const Header = ({title,message}) => {
     return (
-        <header>
-            <h1 style={titleStyle}>{title}</h1>
-            <p style={messageStyle}>{message}</p>
+        <header className='header'>
+            <h1>{title}</h1>
+            <Button color='green' text='Add' />
         </header>
     )
 }
@@ -19,16 +20,16 @@ Header.propTypes = {
     message: PropTypes.string,
 }
 // Adding Css iin Javascript react.
-const titleStyle = {
-    color: 'grey',
-    backgroundColor: 'black',
-    marginBottom: 0,
-}
+// const titleStyle = {
+//     color: 'grey',
+//     backgroundColor: 'black',
+//     marginBottom: 0,
+// }
 
-const messageStyle = {
-    color: 'green',
-    backgroundColor: 'cyan',
-}
+// const messageStyle = {
+//     color: 'green',
+//     backgroundColor: 'cyan',
+// }
 
 export default Header
  
