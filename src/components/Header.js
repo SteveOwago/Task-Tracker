@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 const Header = ({title,message}) => {
     return (
         <header>
-            <h1>{title}</h1>
-            <p>{message}</p>
+            <h1 style={titleStyle}>{title}</h1>
+            <p style={messageStyle}>{message}</p>
         </header>
     )
 }
@@ -17,6 +17,17 @@ Header.defaultProps = {
 Header.propTypes = {
     title: PropTypes.string,
     message: PropTypes.string,
+}
+// Adding Css iin Javascript react.
+const titleStyle = {
+    color: 'grey',
+    backgroundColor: 'black',
+    marginBottom: 0,
+}
+
+const messageStyle = {
+    color: 'green',
+    backgroundColor: 'cyan',
 }
 
 export default Header
