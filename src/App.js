@@ -1,14 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from './components/Header'
 
 function App() {
-  var today = new Date()
-   const datetoday = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+ 
   return (
     <div className="container">
-      <h1>Hello From React</h1>
-      <p>Created on: <strong>{datetoday}</strong></p>
+      <Header />
     </div>
   );
 }
+
+// class App extends React.Component {
+//   render(){
+//     return <h1>Hello from Class Component</h1>
+//   }
+// }
 
 export default App;
