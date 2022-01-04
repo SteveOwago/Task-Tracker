@@ -12,7 +12,7 @@ function App() {
         reminder: true,
     },
     {
-        id:1,
+        id:2,
         text: 'Meeting with Project manager',
         day: 'Jan 1st at 4:30pm',
         reminder: true,
@@ -24,10 +24,19 @@ function App() {
         reminder: false,
     }
 ]);
+
+
+//delete task 
+const deleteTask = (id) => {
+  setTasks(tasks.filter((task)=> task.id !== id))
+}
   return (
     <div className="container">
       <Header />
-      <Tasks tasks={tasks} />
+      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} />: 
+        <div>
+          <p>No Tasks Yet!</p>
+        </div>}
     </div>
   );
 }
