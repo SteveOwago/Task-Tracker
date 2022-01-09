@@ -1,4 +1,8 @@
+import { useState } from "react"
 const AddTask = () => {
+    const [text, setText] = useState('')
+    const [day, setDay] = useState('')
+    const [reminder, setReminder] = useState(false)
     return (
         <form action="" className="add-form">
             <div className="form-control">
@@ -9,11 +13,11 @@ const AddTask = () => {
                 <label htmlFor="">Day & Time</label>
                 <input type="text" placeholder="Add Day & Time"/>
             </div>
-            <div className="form-control">
+            <div className="form-control form-control-check">
                 <label htmlFor="">Set Reminder</label>
                 <input type="checkbox" />
             </div>
-            <input type="submit" value="Save Task" />
+            <input type="submit" className="btn btn-block" value="Save Task" />
         </form>
     )
 }
