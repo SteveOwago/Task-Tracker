@@ -3,6 +3,8 @@ import React from 'react';
 import Header from './components/Header'
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
+import Footer from './components/Footer';
+import About from './components/About';
 
 
 function App() {
@@ -87,6 +89,7 @@ const addTask = async (task)=>{
         <div>
           <p>No Tasks Yet!</p>
         </div>}
+        <Footer/>
     </div>
   );
 }
