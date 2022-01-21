@@ -21,7 +21,7 @@ function App() {
   }, [])
   
   
-  // Fetch Tasks
+  // Fetch Tasks Async uses await. It is a simpler method to work with promises in Js
   const fetchTasks = async () => {
     const res = await fetch('http://localhost:4000/tasks')
     const data = await res.json()
